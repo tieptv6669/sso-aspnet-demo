@@ -1,0 +1,43 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div class="row">
+    <div class="col-md-12" style="padding: 15%;">
+        <h3>Login</h3>
+        <form asp-controller="Authentication" asp-action="SsoLogin" method="post">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Username *" value="" name="Username" autocomplete="off" />
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="Password *" value="" name="Password" autocomplete="off" />
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Callback Url" value="" name="CallbackUrl" />
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btnSubmit" value="Login" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<style>
+    .btnSubmit {
+        width: 50%;
+        border-radius: 1rem;
+        padding: 1.5%;
+        border: none;
+        cursor: pointer;
+        font-weight: 600;
+        color: #fff;
+        background-color: #0062cc;
+    }
+</style>

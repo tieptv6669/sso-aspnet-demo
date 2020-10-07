@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>98575ea5-3c87-48fd-b837-af9f39784998</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Authentication\AuthenticationHandlerImpl.bu" />
+    <None Remove="Authentication\ResourceOwnerPasswordValidator.bu" />
+    <None Remove="Program.bu" />
+    <None Remove="Quickstart\Account\AccountController.bu" />
+    <None Remove="Quickstart\Account\AccountController.bu1" />
+    <None Remove="Startup.bu" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IdentityServer4" Version="4.0.4" />
+    <PackageReference Include="IdentityServer4.EntityFramework" Version="4.0.4" />
+    <PackageReference Include="IdentityServer4.EntityFramework.Storage" Version="4.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.8" />
+    <PackageReference Include="Serilog.AspNetCore" Version="3.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="tempkey.jwk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
